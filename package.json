@@ -1,0 +1,48 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint:ts": "next lint --max-warnings 0",
+    "lint:fix:ts": "next lint --fix --max-warnings 0",
+    "lint:scss": "stylelint --max-warnings 0 \"src/**/*.scss\"",
+    "lint:fix:scss": "stylelint --fix --max-warnings 0 \"src/**/*.scss\"",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src",
+    "typed-scss": "typed-scss-modules \"src/**/*.module.scss\"",
+    "typed-scss:watch": "typed-scss-modules --watch \"src/**/*.module.scss\""
+  },
+  "dependencies": {
+    "@types/node": "^20.8.7",
+    "@types/react": "^18.2.29",
+    "@types/react-dom": "^18.2.13",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.51.0",
+    "eslint-config-next": "13.5.5",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-sort-export-all": "^1.4.1",
+    "eslint-plugin-unicorn": "^48.0.1",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "next": "13.5.5",
+    "normalize.css": "^8.0.1",
+    "prettier": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.69.4",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard-scss": "^11.0.0",
+    "stylelint-order": "^6.0.3",
+    "typed-scss-modules": "^7.1.4",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": "^18.17.1",
+    "pnpm": "^8.9.2"
+  }
+}

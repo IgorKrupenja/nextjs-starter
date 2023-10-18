@@ -1,0 +1,57 @@
+{
+  "plugins": ["sort-export-all", "unused-imports", "unicorn"],
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": ["next.config.js"],
+  "settings": {
+    "import/resolver": {
+      "typescript": true,
+      "node": true
+    }
+  },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true
+      }
+    ],
+    "@typescript-eslint/require-await": "error",
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "no-return-await": "warn",
+    "no-unused-vars": "off",
+    "require-await": "off",
+    "sort-export-all/sort-export-all": ["warn", "asc"],
+    "sort-imports": [
+      "warn",
+      {
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase"
+      }
+    ],
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": "warn"
+  }
+}
