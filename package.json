@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "next lint --max-warnings 0 && stylelint --max-warnings 0 \"src/**/*.scss\"",
     "lint:ts": "next lint --max-warnings 0",
     "lint:fix:ts": "next lint --fix --max-warnings 0",
     "lint:scss": "stylelint --max-warnings 0 \"src/**/*.scss\"",
