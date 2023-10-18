@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { ReactElement } from 'react';
 
-import styles from './root.module.scss';
+import styles from './home.module.scss';
 
 export default function Home(): ReactElement {
   return (

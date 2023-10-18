@@ -13,14 +13,25 @@
     "format": "prettier --write src",
     "format:check": "prettier --check src",
     "typed-scss": "typed-scss-modules \"src/**/*.module.scss\"",
-    "typed-scss:watch": "typed-scss-modules --watch \"src/**/*.module.scss\""
+    "typed-scss:watch": "typed-scss-modules --watch \"src/**/*.module.scss\"",
+    "test": "vitest"
   },
   "dependencies": {
+    "next": "13.5.5",
+    "normalize.css": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.5.1",
     "@types/node": "^20.8.7",
     "@types/react": "^18.2.29",
     "@types/react-dom": "^18.2.13",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
+    "@vitejs/plugin-react": "^4.1.0",
     "eslint": "^8.51.0",
     "eslint-config-next": "13.5.5",
     "eslint-config-prettier": "^9.0.0",
@@ -29,17 +40,15 @@
     "eslint-plugin-sort-export-all": "^1.4.1",
     "eslint-plugin-unicorn": "^48.0.1",
     "eslint-plugin-unused-imports": "^3.0.0",
-    "next": "13.5.5",
-    "normalize.css": "^8.0.1",
+    "jsdom": "^22.1.0",
     "prettier": "^3.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "sass": "^1.69.4",
     "stylelint": "^15.11.0",
     "stylelint-config-standard-scss": "^11.0.0",
     "stylelint-order": "^6.0.3",
     "typed-scss-modules": "^7.1.4",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
   },
   "engines": {
     "node": "^18.17.1",
