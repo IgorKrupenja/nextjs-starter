@@ -1,10 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import { expect, test } from 'vitest';
+import { expect, it } from 'vitest';
 
-// todo broken with aliased paths
-import Home from './page';
+import Home from '@/app/page';
 
-test('App Router: Works with Server Components', () => {
+it('should render Next.js logo', () => {
   render(<Home />);
   expect(screen.getByRole('img', { name: 'Next.js Logo' })).toBeDefined();
 });
