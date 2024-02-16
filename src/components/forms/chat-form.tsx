@@ -31,7 +31,7 @@ export const ChatForm = (): ReactElement => {
           })
         }
       >
-        test post
+        Test POST, bad request
       </Button>
     </div>
   );
