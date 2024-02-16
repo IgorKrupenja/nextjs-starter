@@ -19,6 +19,7 @@ export const ChatForm = (): ReactElement => {
       <form onSubmit={handleSubmit}>
         <input value={input} placeholder="Say something..." onChange={handleInputChange} />
       </form>
+
       <Button
         onClick={() =>
           void fetch('https://dummy.restapiexample.com/api/v1/create', {
