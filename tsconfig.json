@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "typed-scss-modules.config.ts"
+    "typed-scss-modules.config.ts",
+    "postcss.config.cjs"
   ],
   "exclude": ["node_modules"]
 }
