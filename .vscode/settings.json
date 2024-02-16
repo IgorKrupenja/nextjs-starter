@@ -11,5 +11,11 @@
   "stylelint.packageManager": "pnpm",
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.preferences.importModuleSpecifier": "non-relative",
-  "editor.rulers": [100]
+  "editor.rulers": [100],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
 }

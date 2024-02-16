@@ -1,9 +1,7 @@
-import 'normalize.css/normalize.css';
-import '@/styles/_globals.scss';
-
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { PropsWithChildren, ReactElement } from 'react';
+import "./globals.css";
 
 const inter = Inter({ subsets: ['latin'] });
 
