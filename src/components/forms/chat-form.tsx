@@ -8,7 +8,15 @@ export const ChatForm = (): ReactElement => {
   return (
     <Button
       className="m-5"
-      onClick={() => void fetch(`https://${process.env.VERCEL_URL}/api/chat`, { method: 'POST' })}
+      onClick={() =>
+        void fetch(`/api/chat`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ messages: 'blah' }),
+        })
+      }
     >
       Click me
     </Button>

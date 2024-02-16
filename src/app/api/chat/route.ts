@@ -10,7 +10,7 @@ export async function POST(request: Request): Promise<Response> {
   // TODO: https://github.com/vercel/ai
   const chatCompletion = await openai.chat.completions.create({
     messages: [{ role: 'user', content: 'Say this is a test' }],
-    model: 'gpt-4-turbo-preview',
+    model: 'gpt-3.5-turbo',
   });
 
   console.log(chatCompletion);
