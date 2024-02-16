@@ -22,7 +22,7 @@ export const ChatForm = (): ReactElement => {
 
       <Button
         onClick={() =>
-          void fetch('https://dummy.restapiexample.com/api/v1/create', {
+          void fetch('/api/chat', {
             method: 'POST',
             body: JSON.stringify({ name: 'test', salary: '123', age: '23' }),
             headers: {
