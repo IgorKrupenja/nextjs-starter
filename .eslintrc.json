@@ -26,6 +26,7 @@
       }
     ],
     "@typescript-eslint/require-await": "error",
+    "import/no-named-as-default": "off",
     "import/order": [
       "warn",
       {
@@ -51,7 +52,6 @@
         "case": "kebabCase"
       }
     ],
-    "unused-imports/no-unused-imports": "warn",
-    "unused-imports/no-unused-vars": "warn"
+    "unused-imports/no-unused-imports": "warn"
   }
 }

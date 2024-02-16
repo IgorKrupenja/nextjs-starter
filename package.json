@@ -2,6 +2,7 @@
   "name": "web",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,6 +20,7 @@
     "clsx": "^2.1.0",
     "lucide-react": "^0.331.0",
     "next": "14.1.0",
+    "openai": "^4.28.0",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1",
