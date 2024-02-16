@@ -3,6 +3,8 @@
 import { useChat } from 'ai/react';
 import { ReactElement } from 'react';
 
+import { Button } from '@/components/ui/button';
+
 export const ChatForm = (): ReactElement => {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
@@ -17,7 +19,7 @@ export const ChatForm = (): ReactElement => {
       <form onSubmit={handleSubmit}>
         <input value={input} placeholder="Say something..." onChange={handleInputChange} />
       </form>
-      <button
+      <Button
         onClick={() =>
           void fetch('https://dummy.restapiexample.com/api/v1/create', {
             method: 'POST',
@@ -29,7 +31,7 @@ export const ChatForm = (): ReactElement => {
         }
       >
         test post
-      </button>
+      </Button>
     </div>
   );
 };
