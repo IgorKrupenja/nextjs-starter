@@ -4,12 +4,13 @@ import { useChat } from 'ai/react';
 import { ReactElement } from 'react';
 
 import { Button } from '@/components/ui/button';
+import { PropsWithClassName } from '@/interfaces/props-with-class-name.interface';
 
-export const ChatForm = (): ReactElement => {
+export const ChatForm = ({ className }: PropsWithClassName): ReactElement => {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
-    <div>
+    <div className={className}>
       {messages.map((m) => (
         <div key={m.id}>
           {m.role}: {m.content}
@@ -21,6 +22,7 @@ export const ChatForm = (): ReactElement => {
       </form>
 
       <Button
+        className="mt-4"
         onClick={() =>
           void fetch('/api/chat', {
             method: 'POST',
