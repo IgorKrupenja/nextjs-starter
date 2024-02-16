@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { ReactElement } from 'react';
 
+export const runtime = 'edge';
+
 import { ChatForm } from '@/components/forms/chat-form';
 import {
   Accordion,
