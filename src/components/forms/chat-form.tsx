@@ -1,24 +1,22 @@
 'use client';
 
+import { useChat } from 'ai/react';
 import { ReactElement } from 'react';
 
-import { Button } from '@/components/ui/button';
-
 export const ChatForm = (): ReactElement => {
+  const { messages, input, handleInputChange, handleSubmit } = useChat();
+
   return (
-    <Button
-      className="m-5"
-      onClick={() =>
-        void fetch(`/api/chat`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ messages: 'blah' }),
-        })
-      }
-    >
-      Click me
-    </Button>
+    <div>
+      {messages.map((m) => (
+        <div key={m.id}>
+          {m.role}: {m.content}
+        </div>
+      ))}
+
+      <form onSubmit={handleSubmit}>
+        <input value={input} placeholder="Say something..." onChange={handleInputChange} />
+      </form>
+    </div>
   );
 };

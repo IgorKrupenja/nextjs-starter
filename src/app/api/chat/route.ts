@@ -1,19 +1,21 @@
+import { OpenAIStream, StreamingTextResponse } from 'ai';
 import OpenAI from 'openai';
+
+import { PostMessagesBody } from '@/interfaces/post-message-body.interface';
 
 export const runtime = 'edge';
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export async function POST(request: Request): Promise<Response> {
-  console.log('POST /api/ai', request.body);
+  const { messages } = (await request.json()) as PostMessagesBody;
 
-  // TODO: https://github.com/vercel/ai
-  const chatCompletion = await openai.chat.completions.create({
-    messages: [{ role: 'user', content: 'Say this is a test' }],
-    model: 'gpt-3.5-turbo',
+  const response = await openai.chat.completions.create({
+    model: 'gpt-4',
+    stream: true,
+    messages,
   });
+  const stream = OpenAIStream(response);
 
-  console.log(chatCompletion);
-
-  return new Response();
+  return new StreamingTextResponse(stream);
 }
