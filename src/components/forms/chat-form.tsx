@@ -23,7 +23,15 @@ export const ChatForm = ({ className }: PropsWithClassName): ReactElement => {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   const formSchema = z.object({
-    message: z.string().min(1).max(4096),
+    message: z
+      .string()
+      // todo still broken
+      .min(1, {
+        message: 'Message must be at least 1 character long',
+      })
+      .max(4096, {
+        message: 'Message must be at most 4096 characters long',
+      }),
   });
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -66,6 +74,7 @@ export const ChatForm = ({ className }: PropsWithClassName): ReactElement => {
         </form>
       </Form>
 
+      {/* TODO: Replace with a better example */}
       {/* <Button
         className="mt-4"
         onClick={() =>
