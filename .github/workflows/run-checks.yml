@@ -1,0 +1,19 @@
+name: web-run-checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, ready_for_review, reopened, synchronize]
+jobs:
+  build:
+    uses: ./.github/workflows/run-check.yml
+    with:
+      command: pnpm build
+  lint-check:
+    uses: ./.github/workflows/run-check.yml
+    with:
+      command: pnpm run lint:check
+  format-check:
+    uses: ./.github/workflows/run-check.yml
+    with:
+      command: pnpm run format:check
