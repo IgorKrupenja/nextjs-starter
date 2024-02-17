@@ -22,7 +22,7 @@ export default function RootLayout({ children }: PropsWithChildren): ReactElemen
     <html suppressHydrationWarning lang="en">
       <body
         className={cn(
-          'flex min-w-full justify-center bg-background font-sans antialiased',
+          'flex min-h-screen min-w-full justify-center bg-background font-sans antialiased',
           fontSans.variable,
         )}
       >
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: PropsWithChildren): ReactElemen
           enableSystem
           disableTransitionOnChange
         >
-          <main className="relative m-4 flex min-h-screen w-[40rem] flex-col items-center justify-center">
+          <main className="relative m-4 flex w-[40rem] flex-col items-center justify-center">
             <ThemeToggle className="absolute right-0 top-3" />
             {children}
           </main>
