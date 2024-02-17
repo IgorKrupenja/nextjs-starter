@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { PropsWithClassName } from '@/interfaces/props-with-class-name.interface';
 
-export const ThemeToggle = ({ className }: PropsWithClassName): React.JSX.Element => {
+export const ThemeToggle = ({ className }: PropsWithClassName): React.ReactElement => {
   const { setTheme } = useTheme();
 
   return (
