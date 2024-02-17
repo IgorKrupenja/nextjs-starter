@@ -13,7 +13,7 @@ export default function Home(): ReactElement {
 
       <span className="text-sm">
         Have feedback?{' '}
-        <Link className="underline hover:text-violet-500" href="/feedback">
+        <Link className="underline hover:text-primary" href="/feedback">
           Get in touch!
         </Link>
       </span>
