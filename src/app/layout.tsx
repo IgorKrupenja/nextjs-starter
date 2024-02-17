@@ -31,7 +31,7 @@ export default function RootLayout({ children }: PropsWithChildren): ReactElemen
           fontSans.variable,
         )}
       >
-        {/* Cannot add in metadata.icons */}
+        {/* Cannot easily add in metadata.icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <ThemeProvider
           attribute="class"
