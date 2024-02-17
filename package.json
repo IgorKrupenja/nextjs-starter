@@ -22,6 +22,7 @@
     "ai": "^2.2.35",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "eslint-plugin-vitest": "^0.3.22",
     "lucide-react": "^0.331.0",
     "next": "14.1.0",
     "next-themes": "^0.2.1",

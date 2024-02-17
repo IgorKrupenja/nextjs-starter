@@ -57,11 +57,13 @@
   "overrides": [
     {
       "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
-      "extends": ["plugin:testing-library/react"],
+      "plugins": ["vitest"],
+      "extends": ["plugin:vitest/recommended", "plugin:testing-library/react"],
       "rules": {
         "testing-library/await-async-queries": "error",
         "testing-library/no-await-sync-queries": "error",
-        "testing-library/no-debugging-utils": "warn"
+        "testing-library/no-debugging-utils": "warn",
+        "@typescript-eslint/unbound-method": "off"
       }
     }
   ]
