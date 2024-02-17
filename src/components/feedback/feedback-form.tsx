@@ -2,7 +2,7 @@
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Rocket } from 'lucide-react';
-import { ReactElement } from 'react';
+import { HTMLInputTypeAttribute, ReactElement } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { Button } from '@/components/ui/button';
@@ -18,9 +18,13 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { FeedbackFormValues, feedbackFormSchema } from '@/schemas/feedback';
 
-const inputFormFields: { name: keyof FeedbackFormValues; label: string }[] = [
-  { name: 'name', label: 'Name' },
-  { name: 'eMail', label: 'E-mail' },
+const inputFormFields: {
+  name: keyof FeedbackFormValues;
+  label: string;
+  type: HTMLInputTypeAttribute;
+}[] = [
+  { name: 'name', label: 'Name', type: 'text' },
+  { name: 'eMail', label: 'E-mail', type: 'email' },
 ];
 
 export function FeedbackForm(): ReactElement {
@@ -59,7 +63,13 @@ export function FeedbackForm(): ReactElement {
                 <FormItem className="relative col-span-2 sm:col-span-1">
                   <FormLabel>{item.label}</FormLabel>
                   <FormControl>
-                    <Input placeholder={item.label} className="mt-0" {...field} />
+                    <Input
+                      placeholder={item.label}
+                      className="mt-0"
+                      type={item.type}
+                      autoComplete={item.name}
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage className="absolute -bottom-5" />
                 </FormItem>

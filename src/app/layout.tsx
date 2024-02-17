@@ -13,7 +13,7 @@ const fontSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: '🚀🚀🚀',
+  title: 'Next.js Starter 🚀',
   description: 'Your next billion dollar idea.',
   icons: {
     icon: '/icon.svg',
