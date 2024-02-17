@@ -1,8 +1,11 @@
 import { ReactElement } from 'react';
 
+import { FeedbackForm } from '@/components/feedback/feedback-form';
+
 export default function FeedbackPage(): ReactElement {
   return (
-    <main>
+    <>
+      <FeedbackForm />
       {/* TODO: Replace with a better example */}
       {/* TODO: Also use form, like for feedback? */}
       {/* <Button
@@ -19,7 +22,6 @@ export default function FeedbackPage(): ReactElement {
       >
         Test POST, bad request
       </Button> */}
-      Feedback Page
-    </main>
+    </>
   );
 }
