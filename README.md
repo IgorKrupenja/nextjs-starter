@@ -1,6 +1,6 @@
 # Next.js
 
-This is a Next.js starter project with TypeScript, Tailwind, shadcn/ui, ESLint, Stylelint and Vitest. Includes custom configuration for VSCode, ESLint and Stylelint.
+This is a Next.js starter project with TypeScript, Tailwind, shadcn/ui, ESLint, Stylelint and Vitest. Includes custom configuration for VSCode and ESLint.
 
 ## Installation
 
