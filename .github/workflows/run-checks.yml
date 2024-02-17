@@ -9,11 +9,11 @@ jobs:
     uses: ./.github/workflows/run-check.yml
     with:
       command: pnpm build
-  lint-check:
+  lint:
     uses: ./.github/workflows/run-check.yml
     with:
       command: pnpm run lint:check
-  format-check:
+  format:
     uses: ./.github/workflows/run-check.yml
     with:
       command: pnpm run format:check

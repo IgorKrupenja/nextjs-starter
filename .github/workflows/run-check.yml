@@ -16,9 +16,9 @@ jobs:
           version: 8.15.2
       - uses: actions/setup-node@v3
         with:
-          node-version-file: web/.nvmrc
+          node-version-file: .nvmrc
           cache: pnpm
-          cache-dependency-path: web/pnpm-lock.yaml
+          cache-dependency-path: pnpm-lock.yaml
       - run: pnpm install
       - run: ${{ inputs.command }}
     timeout-minutes: 10
