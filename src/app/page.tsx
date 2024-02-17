@@ -7,7 +7,7 @@ import { ChatForm } from '@/components/forms/chat-form';
 export default function Home(): ReactElement {
   return (
     <>
-      <Rocket size={100} className="text-primary" />
+      <Rocket size={100} role="img" aria-label="Logo of a rocket" className="text-primary" />
 
       <ChatForm className="m-4 w-full" />
 
