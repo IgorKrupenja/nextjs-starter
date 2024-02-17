@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { PropsWithChildren, ReactElement } from 'react';
 
 import { ThemeProvider } from '@/components/theme-provider';
+import { ModeToggle } from '@/components/ui/mode-toggle';
 import { cn } from '@/lib/utils';
 
 const fontSans = Inter({
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: PropsWithChildren): ReactElemen
           enableSystem
           disableTransitionOnChange
         >
+          <ModeToggle className="absolute right-5 top-5" />
           {children}
         </ThemeProvider>
       </body>

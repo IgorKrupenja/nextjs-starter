@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ReactElement } from 'react';
 
 import { ChatForm } from '@/components/forms/chat-form';
+import { ModeToggle } from '@/components/ui/mode-toggle';
 
 export default function Home(): ReactElement {
   return (
