@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react';
 
 import Home from '@/app/page';
 
-// TODO: fix these tests
 describe('Home', () => {
   it('should render Rocket component with correct class', () => {
     render(<Home />);
@@ -13,12 +12,6 @@ describe('Home', () => {
     expect(rocketElement).toBeDefined();
     expect(rocketElement.classList.contains('text-primary')).toBe(true);
   });
-
-  // it('should render ChatForm component with correct class', () => {
-  //   render(<Home />);
-  //   const chatFormElement = screen.getByRole('form', { name: 'Chat Form' });
-  //   expect(chatFormElement).toHaveClass('m-4 w-full');
-  // });
 
   it('should render feedback link with correct text, href and classes', () => {
     render(<Home />);

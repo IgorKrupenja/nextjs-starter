@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev --host 0.0.0.0 --turbo",
+    "dev": "next dev -H 0.0.0.0 --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix --max-warnings 0",
