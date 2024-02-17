@@ -3,11 +3,10 @@ import Link from 'next/link';
 import { ReactElement } from 'react';
 
 import { ChatForm } from '@/components/forms/chat-form';
-import { ModeToggle } from '@/components/ui/mode-toggle';
 
 export default function Home(): ReactElement {
   return (
-    <main className="m-4 flex w-[600px] flex-col items-center justify-between">
+    <>
       <Rocket size={100} className="text-primary" />
 
       <ChatForm className="m-4 w-full" />
@@ -18,6 +17,6 @@ export default function Home(): ReactElement {
           Get in touch!
         </Link>
       </span>
-    </main>
+    </>
   );
 }

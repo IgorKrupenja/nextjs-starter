@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 import { PropsWithChildren, ReactElement } from 'react';
 
 import { ThemeProvider } from '@/components/theme-provider';
-import { ModeToggle } from '@/components/ui/mode-toggle';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { cn } from '@/lib/utils';
 
 const fontSans = Inter({
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: PropsWithChildren): ReactElemen
     <html suppressHydrationWarning lang="en">
       <body
         className={cn(
-          'flex min-h-screen min-w-full items-center justify-center bg-background font-sans antialiased',
+          'flex min-w-full justify-center bg-background font-sans antialiased',
           fontSans.variable,
         )}
       >
@@ -32,8 +32,10 @@ export default function RootLayout({ children }: PropsWithChildren): ReactElemen
           enableSystem
           disableTransitionOnChange
         >
-          <ModeToggle className="absolute right-5 top-5" />
-          {children}
+          <main className="relative m-4 flex min-h-screen w-[40rem] flex-col items-center justify-center">
+            <ThemeToggle className="absolute right-0 top-3" />
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
