@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ReactElement } from 'react';
 
 import { Button } from '@/components/ui/button';
-import { PropsWithClassName } from '@/interfaces/props-with-class-name.interface';
+import { PropsWithClassName } from '@/interfaces/props-with-class-name';
 import { cn } from '@/lib/utils';
 
 export default function BackButton({ className }: PropsWithClassName): ReactElement {

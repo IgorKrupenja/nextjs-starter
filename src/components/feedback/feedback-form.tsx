@@ -4,20 +4,12 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Rocket } from 'lucide-react';
 import { ReactElement } from 'react';
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-
-const formSchema = z.object({
-  name: z.string().min(1, { message: 'Name is required' }),
-  eMail: z.string().email({ message: 'Invalid email' }),
-  message: z.string().min(1, { message: 'Message is required' }),
-});
-
-export type FeedbackFormValues = z.infer<typeof formSchema>;
+import { FeedbackFormValues, feedbackFormSchema } from '@/schemas/feedback';
 
 const inputFormFields: { name: keyof FeedbackFormValues; placeholder: string }[] = [
   { name: 'name', placeholder: 'Name' },
@@ -25,8 +17,8 @@ const inputFormFields: { name: keyof FeedbackFormValues; placeholder: string }[]
 ];
 
 export function FeedbackForm(): ReactElement {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<FeedbackFormValues>({
+    resolver: zodResolver(feedbackFormSchema),
     defaultValues: {
       name: '',
       eMail: '',

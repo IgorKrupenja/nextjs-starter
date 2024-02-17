@@ -5,7 +5,7 @@ import { ReactElement } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { PropsWithClassName } from '@/interfaces/props-with-class-name.interface';
+import { PropsWithClassName } from '@/interfaces/props-with-class-name';
 
 export function Chat({ className }: PropsWithClassName): ReactElement {
   const { messages, input, handleInputChange, handleSubmit } = useChat();

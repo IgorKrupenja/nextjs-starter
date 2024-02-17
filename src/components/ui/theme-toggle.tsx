@@ -11,7 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { PropsWithClassName } from '@/interfaces/props-with-class-name.interface';
+import { PropsWithClassName } from '@/interfaces/props-with-class-name';
 
 export const ThemeToggle = ({ className }: PropsWithClassName): React.ReactElement => {
   const { setTheme } = useTheme();
