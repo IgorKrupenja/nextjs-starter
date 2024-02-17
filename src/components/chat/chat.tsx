@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { PropsWithClassName } from '@/interfaces/props-with-class-name.interface';
 
 // TODO: Rename
-export const ChatForm = ({ className }: PropsWithClassName): ReactElement => {
+export const Chat = ({ className }: PropsWithClassName): ReactElement => {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
