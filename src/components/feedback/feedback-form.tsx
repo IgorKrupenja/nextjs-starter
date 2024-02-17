@@ -49,7 +49,7 @@ export function FeedbackForm(): ReactElement {
               control={form.control}
               name={item.name}
               render={({ field }) => (
-                <FormItem className="relative">
+                <FormItem className="relative col-span-2 sm:col-span-1">
                   <FormMessage className="absolute -top-7" />
                   <FormControl>
                     <Input placeholder={item.placeholder} className="mt-0" {...field} />

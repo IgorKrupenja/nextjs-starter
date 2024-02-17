@@ -8,7 +8,7 @@ export default function FeedbackPage(): ReactElement {
     <>
       <BackButton className="absolute left-0 top-3" />
 
-      <h1 className="mb-10 ml-auto mr-0 text-4xl font-extrabold">Let&apos;s get in touch!</h1>
+      <h1 className="mb-10 text-4xl font-extrabold sm:ml-auto sm:mr-0">Let&apos;s get in touch!</h1>
       <FeedbackForm />
     </>
   );
