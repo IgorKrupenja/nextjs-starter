@@ -40,7 +40,7 @@ export function FeedbackForm(): ReactElement {
     <Form {...form}>
       <form
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
-        className="grid w-full grid-cols-2 gap-4"
+        className="grid w-full grid-cols-2 gap-7 sm:gap-4"
       >
         {inputFormFields.map((item) => {
           return (
@@ -50,7 +50,7 @@ export function FeedbackForm(): ReactElement {
               name={item.name}
               render={({ field }) => (
                 <FormItem className="relative col-span-2 sm:col-span-1">
-                  <FormMessage className="absolute -top-7" />
+                  <FormMessage className="absolute -top-5 sm:-top-7" />
                   <FormControl>
                     <Input placeholder={item.placeholder} className="mt-0" {...field} />
                   </FormControl>
@@ -66,14 +66,14 @@ export function FeedbackForm(): ReactElement {
           render={({ field }) => (
             <FormItem className="relative col-span-2">
               <FormControl>
-                <Textarea placeholder="Message" className="resize-none" {...field} />
+                <Textarea placeholder="Message" className="min-h-40 resize-none" {...field} />
               </FormControl>
-              <FormMessage className="absolute -bottom-7" />
+              <FormMessage className="absolute -top-5 sm:-bottom-7" />
             </FormItem>
           )}
         />
 
-        <Button type="submit" className="col-start-2">
+        <Button type="submit" className="col-span-2 sm:col-span-1 sm:col-start-2">
           <Rocket className="mr-2" />
           Submit
         </Button>
