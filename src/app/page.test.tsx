@@ -6,7 +6,9 @@ import Home from '@/app/page';
 describe('Home', () => {
   it('should render Rocket component with correct class', () => {
     render(<Home />);
-    const rocketElement = screen.getByLabelText('Logo of a rocket') as HTMLOrSVGImageElement;
+    const rocketElement = screen.getByLabelText(
+      'Logo of a stylised purple rocket flying towards top-right',
+    ) as HTMLOrSVGImageElement;
 
     expect(rocketElement).toBeDefined();
     expect(rocketElement.classList.contains('text-primary')).toBe(true);
