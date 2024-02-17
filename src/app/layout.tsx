@@ -15,6 +15,11 @@ const fontSans = Inter({
 export const metadata: Metadata = {
   title: '🚀🚀🚀',
   description: 'Your next billion dollar startup.',
+  icons: {
+    icon: '/icon.svg',
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: 'manifest.webmanifest',
 };
 
 export default function RootLayout({ children }: PropsWithChildren): ReactElement {
@@ -26,6 +31,8 @@ export default function RootLayout({ children }: PropsWithChildren): ReactElemen
           fontSans.variable,
         )}
       >
+        {/* Cannot add in metadata.icons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
