@@ -1,10 +1,10 @@
-import './globals.css';
+import '../styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { PropsWithChildren, ReactElement } from 'react';
 
 import { ThemeProvider } from '@/components/common/theme-provider';
-import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { ThemeToggle } from '@/components/common/theme-toggle';
 import { cn } from '@/lib/utils';
 
 const fontSans = Inter({
