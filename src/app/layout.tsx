@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren): ReactElement {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
       <body
         className={cn(
           'flex min-h-screen min-w-full items-center bg-background font-sans antialiased',
