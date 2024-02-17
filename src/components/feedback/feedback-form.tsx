@@ -1,6 +1,7 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { Rocket } from 'lucide-react';
 import { ReactElement } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -81,6 +82,7 @@ export function FeedbackForm(): ReactElement {
         />
 
         <Button type="submit" className="col-start-2">
+          <Rocket className="mr-2" />
           Submit
         </Button>
       </form>
