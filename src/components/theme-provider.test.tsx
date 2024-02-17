@@ -1,15 +1,16 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import { ThemeProvider } from './theme-provider';
 
 describe('ThemeProvider', () => {
   it('should render children', () => {
-    const { getByText } = render(
+    render(
       <ThemeProvider>
         <div>Test</div>
       </ThemeProvider>,
     );
+    const child = screen.getByText('Test');
 
-    expect(getByText('Test')).toBeDefined();
+    expect(child).toBeDefined();
   });
 });
