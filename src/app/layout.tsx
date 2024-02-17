@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { PropsWithChildren, ReactElement } from 'react';
 
-import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeProvider } from '@/components/common/theme-provider';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { cn } from '@/lib/utils';
 
