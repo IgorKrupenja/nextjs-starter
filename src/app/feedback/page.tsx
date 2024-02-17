@@ -1,7 +1,12 @@
+import { Metadata } from 'next';
 import { ReactElement } from 'react';
 
 import BackButton from '@/components/common/back-button';
 import { FeedbackForm } from '@/components/feedback/feedback-form';
+
+export const metadata: Metadata = {
+  title: 'Next.js Starter 🚀 — Get in touch',
+};
 
 export default function FeedbackPage(): ReactElement {
   return (

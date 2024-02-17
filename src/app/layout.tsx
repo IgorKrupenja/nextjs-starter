@@ -14,7 +14,7 @@ const fontSans = Inter({
 
 export const metadata: Metadata = {
   title: 'Next.js Starter 🚀',
-  description: 'Your next billion dollar idea.',
+  description: 'Your next billion dollar idea starts here.',
   icons: {
     icon: '/icon.svg',
     apple: '/apple-touch-icon.png',
