@@ -5,10 +5,10 @@ on:
   pull_request:
     types: [opened, ready_for_review, reopened, synchronize]
 jobs:
-  build:
+  test:
     uses: ./.github/workflows/run-check.yml
     with:
-      command: pnpm build
+      command: pnpm test
   lint:
     uses: ./.github/workflows/run-check.yml
     with:
