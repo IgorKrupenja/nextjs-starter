@@ -11,5 +11,8 @@
   "editor.rulers": [100],
   "files.associations": {
     "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
   }
 }
