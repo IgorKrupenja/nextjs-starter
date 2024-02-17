@@ -16,14 +16,14 @@ const formSchema = z.object({
   message: z.string().min(1, { message: 'Message is required' }),
 });
 
-type formValues = z.infer<typeof formSchema>;
+export type FeedbackFormValues = z.infer<typeof formSchema>;
 
-const inputFormFields: { name: keyof formValues; placeholder: string }[] = [
+const inputFormFields: { name: keyof FeedbackFormValues; placeholder: string }[] = [
   { name: 'name', placeholder: 'Name' },
   { name: 'eMail', placeholder: 'E-mail' },
 ];
 
-export const FeedbackForm = (): ReactElement => {
+export function FeedbackForm(): ReactElement {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -33,11 +33,15 @@ export const FeedbackForm = (): ReactElement => {
     },
   });
 
-  const onSubmit = (values: formValues): void => {
-    // todo Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-  };
+  async function onSubmit(values: FeedbackFormValues): Promise<void> {
+    await fetch('/api/feedback', {
+      method: 'POST',
+      body: JSON.stringify(values),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
 
   return (
     <Form {...form}>
@@ -82,4 +86,4 @@ export const FeedbackForm = (): ReactElement => {
       </form>
     </Form>
   );
-};
+}
