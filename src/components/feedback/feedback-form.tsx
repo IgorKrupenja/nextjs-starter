@@ -6,14 +6,21 @@ import { ReactElement } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { Button } from '@/components/ui/button';
-import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { FeedbackFormValues, feedbackFormSchema } from '@/schemas/feedback';
 
-const inputFormFields: { name: keyof FeedbackFormValues; placeholder: string }[] = [
-  { name: 'name', placeholder: 'Name' },
-  { name: 'eMail', placeholder: 'E-mail' },
+const inputFormFields: { name: keyof FeedbackFormValues; label: string }[] = [
+  { name: 'name', label: 'Name' },
+  { name: 'eMail', label: 'E-mail' },
 ];
 
 export function FeedbackForm(): ReactElement {
@@ -40,7 +47,7 @@ export function FeedbackForm(): ReactElement {
     <Form {...form}>
       <form
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
-        className="grid w-full grid-cols-2 gap-7 sm:gap-4"
+        className="grid w-full grid-cols-2 gap-7"
       >
         {inputFormFields.map((item) => {
           return (
@@ -50,10 +57,11 @@ export function FeedbackForm(): ReactElement {
               name={item.name}
               render={({ field }) => (
                 <FormItem className="relative col-span-2 sm:col-span-1">
-                  <FormMessage className="absolute -top-5 sm:-top-7" />
+                  <FormLabel>{item.label}</FormLabel>
                   <FormControl>
-                    <Input placeholder={item.placeholder} className="mt-0" {...field} />
+                    <Input placeholder={item.label} className="mt-0" {...field} />
                   </FormControl>
+                  <FormMessage className="absolute -bottom-5" />
                 </FormItem>
               )}
             />
@@ -65,10 +73,11 @@ export function FeedbackForm(): ReactElement {
           name="message"
           render={({ field }) => (
             <FormItem className="relative col-span-2">
+              <FormLabel>Message</FormLabel>
               <FormControl>
                 <Textarea placeholder="Message" className="min-h-40 resize-none" {...field} />
               </FormControl>
-              <FormMessage className="absolute -top-5 sm:-bottom-7 sm:top-auto" />
+              <FormMessage className="absolute -bottom-5" />
             </FormItem>
           )}
         />
