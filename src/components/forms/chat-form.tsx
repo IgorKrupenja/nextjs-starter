@@ -12,6 +12,7 @@ export const ChatForm = ({ className }: PropsWithClassName): ReactElement => {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
+    // TODO: Implement proper chat UI
     <div className={className}>
       {messages.map((m) => (
         <div key={m.id}>
