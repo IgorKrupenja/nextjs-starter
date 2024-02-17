@@ -7,7 +7,11 @@ import { Chat } from '@/components/chat/chat';
 export default function Home(): ReactElement {
   return (
     <>
-      <Rocket size={100} role="img" aria-label="Logo of a rocket" className="text-primary" />
+      <Rocket
+        size={100}
+        aria-label="Logo of a stylised purple rocket flying towards top-right"
+        className="text-primary"
+      />
 
       <Chat className="m-4 w-full" />
 

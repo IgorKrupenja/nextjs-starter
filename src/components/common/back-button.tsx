@@ -8,13 +8,9 @@ import { cn } from '@/lib/utils';
 
 export default function BackButton({ className }: PropsWithClassName): ReactElement {
   return (
-    <Button
-      asChild
-      variant="outline"
-      className={cn('mb-10 text-primary hover:text-primary', className)}
-    >
+    <Button asChild variant="outline" className={cn('text-primary hover:text-primary', className)}>
       <Link href="/">
-        <ArrowLeft className="mr-2 h-[1.2rem] w-[1.2rem]" />
+        <ArrowLeft className="mr-2 h-5 w-5" />
         Back
       </Link>
     </Button>

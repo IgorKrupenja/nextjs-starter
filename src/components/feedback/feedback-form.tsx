@@ -68,13 +68,13 @@ export function FeedbackForm(): ReactElement {
               <FormControl>
                 <Textarea placeholder="Message" className="min-h-40 resize-none" {...field} />
               </FormControl>
-              <FormMessage className="absolute -top-5 sm:-bottom-7" />
+              <FormMessage className="absolute -top-5 sm:-bottom-7 sm:top-auto" />
             </FormItem>
           )}
         />
 
         <Button type="submit" className="col-span-2 sm:col-span-1 sm:col-start-2">
-          <Rocket className="mr-2" />
+          <Rocket className="mr-2 h-5 w-5" />
           Submit
         </Button>
       </form>
