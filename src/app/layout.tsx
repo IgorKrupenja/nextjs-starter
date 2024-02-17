@@ -21,7 +21,7 @@ export default function RootLayout({ children }: PropsWithChildren): ReactElemen
     <html suppressHydrationWarning lang="en">
       <body
         className={cn(
-          'flex min-h-screen min-w-full items-center bg-background font-sans antialiased',
+          'flex min-h-screen min-w-full items-center justify-center bg-background font-sans antialiased',
           fontSans.variable,
         )}
       >

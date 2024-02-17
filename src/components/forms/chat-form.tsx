@@ -18,7 +18,7 @@ export const ChatForm = ({ className }: PropsWithClassName): ReactElement => {
         </div>
       ))}
 
-      <form className="flex w-96 max-w-sm items-center space-x-2" onSubmit={handleSubmit}>
+      <form className="flex w-full items-center space-x-2" onSubmit={handleSubmit}>
         <Input value={input} placeholder="Message your AI pet" onChange={handleInputChange} />
         <Button type="submit">Submit</Button>
       </form>
