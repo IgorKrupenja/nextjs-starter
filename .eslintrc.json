@@ -11,7 +11,7 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "ignorePatterns": ["next.config.js", "postcss.config.cjs"],
+  "ignorePatterns": ["next.config.js", "postcss.config.cjs", "src/components/ui"],
   "settings": {
     "import/resolver": {
       "typescript": true,

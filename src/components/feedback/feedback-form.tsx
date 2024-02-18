@@ -73,12 +73,11 @@ export function FeedbackForm(): ReactElement {
               control={form.control}
               name={item.name}
               render={({ field }) => (
-                <FormItem className="relative col-span-2 sm:col-span-1">
+                <FormItem className="relative col-span-2 space-y-0 sm:col-span-1">
                   <FormLabel>{item.label}</FormLabel>
                   <FormControl>
                     <Input
                       placeholder={item.label}
-                      className="mt-0"
                       type={item.type}
                       autoComplete={item.name}
                       {...field}
@@ -95,7 +94,7 @@ export function FeedbackForm(): ReactElement {
           control={form.control}
           name="message"
           render={({ field }) => (
-            <FormItem className="relative col-span-2">
+            <FormItem className="relative col-span-2 space-y-0">
               <FormLabel>Message</FormLabel>
               <FormControl>
                 <Textarea placeholder="Message" className="min-h-40 resize-none" {...field} />

@@ -5,3 +5,6 @@ node_modules
 # Ignore files for PNPM, NPM and YARN
 package.json
 pnpm-lock.yaml
+
+# shadcn UI
+src/components/ui
