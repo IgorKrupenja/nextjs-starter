@@ -9,6 +9,7 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: [path.resolve(__dirname, 'src/test/setup.ts')],
+    exclude: [...configDefaults.exclude, 'src/e2e'],
     coverage: {
       provider: 'v8',
       exclude: [
@@ -16,9 +17,9 @@ export default defineConfig({
         'next.config.js',
         'postcss.config.cjs',
         'tailwind.config.ts',
+        'playwright.config.ts',
         'src/schemas',
         'src/interfaces',
-        'src/test/setup.ts',
         'src/components/ui',
       ],
     },

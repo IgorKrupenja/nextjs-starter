@@ -1,4 +1,4 @@
-name: run-check
+name: Run check
 on:
   workflow_call:
     inputs:

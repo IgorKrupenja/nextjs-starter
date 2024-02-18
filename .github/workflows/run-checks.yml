@@ -1,4 +1,4 @@
-name: web-run-checks
+name: Run checks
 on:
   push:
     branches: [main]

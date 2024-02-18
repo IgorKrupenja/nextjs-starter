@@ -1,0 +1,44 @@
+name: Run Playwright tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, ready_for_review, reopened, synchronize]
+jobs:
+  test:
+    timeout-minutes: 60
+    if: github.event_name != 'pull_request' || !github.event.pull_request.draft
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.15.2
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: pnpm install
+
+      - name: Add .env variable
+        run: |
+          touch .env
+          echo OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} >> .env
+
+      # Uses container with browser dependencies installed as this is fater
+      # Slower version with cache has been removed here: https://github.com/IgorKrupenja/nextjs-starter/commit/4b6a52fa33341cbd87f63d0c79366ce679a1b2b8#diff-7afcd2d8f7b49bda74843f209eefb7b2da45f7e7803bf2e4bd636699b76aa2d3L1
+      - name: Run Playwright tests
+        uses: docker://mcr.microsoft.com/playwright:v1.41.1-jammy
+        with:
+          # The container does not have pnpm
+          # env HOME=/root is needed for Firefox
+          args: env HOME=/root npx playwright test
+
+      - name: Store Artifacts from Failed Tests
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: test-results/
+          retention-days: 7
