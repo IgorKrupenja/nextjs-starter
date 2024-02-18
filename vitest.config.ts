@@ -18,7 +18,7 @@ export default defineConfig({
         'tailwind.config.ts',
         'src/schemas',
         'src/interfaces',
-        'src/tes/setup.ts',
+        'src/test/setup.ts',
         'src/components/ui',
       ],
     },
