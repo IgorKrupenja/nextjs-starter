@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 
 import Home from '@/app/page';
+import { expectToContainClasses } from '@/test/utils';
 
 describe('Home', () => {
   it('should render Rocket component with correct class', () => {
@@ -18,8 +19,7 @@ describe('Home', () => {
     const feedbackLinkElement = screen.getByRole('link', { name: 'Get in touch!' });
 
     expect(feedbackLinkElement.textContent).toBeDefined();
-    expect(feedbackLinkElement.classList.contains('underline')).toBe(true);
-    expect(feedbackLinkElement.classList.contains('hover:text-primary')).toBe(true);
+    expectToContainClasses(feedbackLinkElement, ['hover:text-primary', 'underline']);
     expect(feedbackLinkElement.getAttribute('href')).toBe('/feedback');
   });
 });

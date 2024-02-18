@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 
 import RootLayout from '@/app/layout';
+import { expectToContainClasses } from '@/test/utils';
 
 vi.mock('next/font/google', () => ({
   Inter: () => ({
@@ -29,9 +30,7 @@ describe('RootLayout', () => {
     const themeToggleElement = screen.getByRole('button', { name: 'Toggle color theme' });
 
     expect(themeToggleElement).toBeDefined();
-    ['absolute', 'right-0', 'top-0'].forEach((className) => {
-      expect(themeToggleElement.classList.contains(className)).toBe(true);
-    });
+    expectToContainClasses(themeToggleElement, ['absolute', 'right-0', 'top-0']);
   });
 
   it('should render main with correct classes', () => {
@@ -39,8 +38,12 @@ describe('RootLayout', () => {
     const mainElement = screen.getByRole('main');
 
     expect(mainElement).toBeDefined();
-    ['relative', 'flex', 'flex-col', 'items-center', 'justify-center'].forEach((className) => {
-      expect(mainElement.classList.contains(className)).toBe(true);
-    });
+    expectToContainClasses(mainElement, [
+      'relative',
+      'flex',
+      'flex-col',
+      'items-center',
+      'justify-center',
+    ]);
   });
 });

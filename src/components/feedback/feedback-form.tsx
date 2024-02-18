@@ -24,7 +24,7 @@ const inputFormFields: {
   type: HTMLInputTypeAttribute;
 }[] = [
   { name: 'name', label: 'Name', type: 'text' },
-  { name: 'eMail', label: 'E-mail', type: 'email' },
+  { name: 'email', label: 'E-mail', type: 'email' },
 ];
 
 export function FeedbackForm(): ReactElement {
@@ -32,7 +32,7 @@ export function FeedbackForm(): ReactElement {
     resolver: zodResolver(feedbackFormSchema),
     defaultValues: {
       name: '',
-      eMail: '',
+      email: '',
       message: '',
     },
   });
