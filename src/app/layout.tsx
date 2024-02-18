@@ -6,6 +6,7 @@ import { PropsWithChildren, ReactElement } from 'react';
 import { ThemeProvider } from '@/components/common/theme-provider';
 import { ThemeToggle } from '@/components/common/theme-toggle';
 import { cn } from '@/lib/utils';
+import { Toaster } from '@/components/ui/toaster';
 
 const fontSans = Inter({
   subsets: ['latin'],
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: PropsWithChildren): ReactElemen
             {children}
           </main>
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );

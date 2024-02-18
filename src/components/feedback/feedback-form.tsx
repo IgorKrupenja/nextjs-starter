@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/components/ui/use-toast';
 import { FeedbackFormValues, feedbackFormSchema } from '@/schemas/feedback';
 
 const inputFormFields: {
@@ -28,6 +29,7 @@ const inputFormFields: {
 ];
 
 export function FeedbackForm(): ReactElement {
+  const { toast } = useToast();
   const form = useForm<FeedbackFormValues>({
     resolver: zodResolver(feedbackFormSchema),
     defaultValues: {
@@ -38,13 +40,24 @@ export function FeedbackForm(): ReactElement {
   });
 
   async function onSubmit(values: FeedbackFormValues): Promise<void> {
-    await fetch('/api/feedback', {
+    const response = await fetch('/api/feedback', {
       method: 'POST',
       body: JSON.stringify(values),
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
     });
+
+    if (response.ok) {
+      form.reset();
+      toast({
+        title: 'Feedback sent!',
+        description: 'To do: implement in route handler',
+      });
+    } else {
+      toast({
+        title: 'Uh oh! Something went wrong.',
+        description: 'There was a problem with your request.',
+      });
+    }
   }
 
   return (

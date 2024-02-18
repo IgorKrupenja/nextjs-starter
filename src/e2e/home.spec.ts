@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('should navigate to the Fedback page', async ({ page }) => {
+test('should navigate to the Feedback page', async ({ page }) => {
   await page.goto('http://localhost:3000/');
   await page.click('text=Get in touch!');
 

@@ -26,7 +26,7 @@ jobs:
           touch .env
           echo OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} >> .env
 
-      # Uses container with browser dependencies installed as this is fater
+      # Uses container with browser dependencies pre-installed as this is fater
       # Slower version with cache has been removed here: https://github.com/IgorKrupenja/nextjs-starter/commit/4b6a52fa33341cbd87f63d0c79366ce679a1b2b8#diff-7afcd2d8f7b49bda74843f209eefb7b2da45f7e7803bf2e4bd636699b76aa2d3L1
       - name: Run Playwright tests
         uses: docker://mcr.microsoft.com/playwright:v1.41.1-jammy
