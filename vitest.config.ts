@@ -17,6 +17,7 @@ export default defineConfig({
         'postcss.config.cjs',
         'tailwind.config.ts',
         'src/schemas',
+        'src/interfaces',
         'src/tes/setup.ts',
         'src/components/ui',
       ],
