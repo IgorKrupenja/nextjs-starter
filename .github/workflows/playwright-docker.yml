@@ -33,7 +33,7 @@ jobs:
         with:
           # The container does not have pnpm
           # env HOME=/root is needed for Firefox
-          args: npm install -g pnpm && env HOME=/root pnpm run test:e2e
+          args: bash -c "npm install -g pnpm && env HOME=/root pnpm run test:e2e"
 
       - name: Store Artifacts from Failed Tests
         if: failure()
