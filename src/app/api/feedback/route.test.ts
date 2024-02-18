@@ -13,7 +13,7 @@ describe('POST', () => {
   it('should return a successful response if form submission is valid', async () => {
     const data = {
       name: 'John Doe',
-      eMail: 'johndoe@example.com',
+      email: 'johndoe@example.com',
       message: 'Hello, World!',
     };
     const request = {
@@ -33,7 +33,7 @@ describe('POST', () => {
   });
 
   it('should return a response with errors if form submission is invalid', async () => {
-    const data = { name: '', eMail: 'johndoe@example.com', message: '' };
+    const data = { name: '', email: 'johndoe@example.com', message: '' };
     const request = {
       json: vi.fn().mockResolvedValueOnce(data),
     } as unknown as Request;

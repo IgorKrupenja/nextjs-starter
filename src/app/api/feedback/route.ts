@@ -4,9 +4,9 @@ import { FeedbackFormValues, feedbackFormSchema } from '@/schemas/feedback';
 export const runtime = 'edge';
 
 export async function POST(request: Request): Promise<Response> {
-  const { name, eMail, message } = (await request.json()) as FeedbackFormValues;
+  const { name, email, message } = (await request.json()) as FeedbackFormValues;
 
-  const parseResult = feedbackFormSchema.safeParse({ name, eMail, message });
+  const parseResult = feedbackFormSchema.safeParse({ name, email, message });
 
   const errors = getErrorsFromParseResult(parseResult);
 
