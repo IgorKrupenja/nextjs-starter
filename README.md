@@ -4,22 +4,23 @@ This is a Next.js starter project with TypeScript, Tailwind, shadcn/ui, ESLint, 
 
 ## Installation
 
-1. Install `pnpm`.
+1. Make sure you have Node.js 20 installed.
+2. Install `pnpm`.
 
    ```bash
    corepack enable
    corepack prepare pnpm@latest --activate
    ```
 
-2. Create a new project from this template.
+3. Create a new project from this template.
 
    ```bash
-   pnpm dlx degit IgorKrupenja/nextjs-starter nextjs-starter
+   pnpm dlx degit IgorKrupenja/nextjs-starter my-billion-dollar-startup
    ```
 
-3. Install dependencies.
+4. Install dependencies.
 
    ```bash
-   cd nextjs-starter
+   cd my-billion-dollar-startup
    pnpm install
    ```
