@@ -14,5 +14,7 @@ export async function POST(request: Request): Promise<Response> {
     return Response.json({ errors }, { status: 400 });
   }
 
+  // TODO: Implement some DB/email/etc. logic
+
   return new Response('Form submitted!');
 }
