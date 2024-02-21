@@ -1,10 +1,10 @@
 # Next.js
 
-Next.js starter project with the following:
+Next.js starter/boilerplate project with the following:
 
 - [Tailwind CSS](https://tailwindcss.com/).
 - [shadcn/ui](https://ui.shadcn.com/) components and [Lucide](https://lucide.dev/guide/packages/lucide-react) icons.
-- [React Hook Form](https://react-hook-form.com/) and for forms.
+- [React Hook Form](https://react-hook-form.com/) for forms.
 - [Zod](https://zod.dev/) for schema validation.
 - [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/) for unit and component tests.
 - [Playwright](https://playwright.dev/) for end-to-end tests.
@@ -38,10 +38,11 @@ The project has a few example pages and route handlers with tests, including a s
    pnpm install
    ```
 
-5. If you want to use the chat bot example, copy `.env.example` to `.env.local` and add your OpenAI API key.
+5. If you want to use the chat bot example, create `.env.local` file and add your OpenAI API key in that file.
 
    ```bash
-   cp .env.example .env.local
+   touch .env.local
+   echo "OPENAI_API_KEY=your-api-key" >> .env.local
    ```
 
 ## Running
@@ -82,8 +83,7 @@ The easiest way would be to deploy to [Vercel](https://vercel.com/docs/framework
 
 ## To do
 
-<!-- todo finish -->
-
 - [ ] **Coming soon**: [Finish](https://github.com/IgorKrupenja/nextjs-starter/issues/1) the chat bot example UI.
 - [ ] **Coming soon**: [Add more tests](https://github.com/IgorKrupenja/nextjs-starter/issues/6).
-<!-- - [ ] -->
+- [ ] Add support for [Supabase](https://github.com/IgorKrupenja/nextjs-starter/issues/17) and [Supabase Auth](https://github.com/IgorKrupenja/nextjs-starter/issues/18) (or similar).
+- [ ] Add support for [Stripe](https://github.com/IgorKrupenja/nextjs-starter/issues/19). You next billion-dollar startup will need to make money, right? 😉
