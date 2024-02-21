@@ -21,10 +21,10 @@ jobs:
           cache-dependency-path: pnpm-lock.yaml
       - run: pnpm install
 
-      - name: Add .env variable
-        run: |
-          touch .env
-          echo OPENAI_API_KEY="dummy" >> .env
+      # - name: Add .env variable
+      #   run: |
+      #     touch .env
+      #     echo OPENAI_API_KEY="dummy" >> .env
 
       # Uses container with browser dependencies pre-installed as this is fater
       # Slower version with cache has been removed here:
