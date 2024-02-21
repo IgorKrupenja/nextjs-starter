@@ -11,6 +11,7 @@ Next.js starter/boilerplate project with the following:
 - [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/) with tailored configs.
 - Custom VSCode [config](.vscode/settings.json).
 - [GitHub Actions](https://github.com/features/actions) for running linter, formatter and tests.
+- Great match for your next billion-dollar startup 🚀
 
 The project has a few example pages and route handlers with tests, including a simple AI chat bot example, made with [OpenAI Node API Library
 ](https://github.com/openai/openai-node) and [Vercel AI SDK](https://sdk.vercel.ai/docs). You can delete these if you don't need them.
