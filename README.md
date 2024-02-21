@@ -44,9 +44,6 @@ The project has a few example pages and route handlers with tests, including a s
    cp .env.example .env.local
    ```
 
-<!-- todo? -->
-   <!-- Additionally, you should add -->
-
 ## Running
 
 ```bash
