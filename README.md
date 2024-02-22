@@ -42,7 +42,7 @@ The project has a few example pages and route handlers with tests, including a s
    pnpm install
    ```
 
-5. If you want to use the chat bot example, create `.env.local` file and add your OpenAI API key in that file.
+5. If you want to use the chat bot example, create `.env.local` file and add your OpenAI API key to that file.
 
    ```bash
    touch .env.local
