@@ -6,8 +6,8 @@ export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs));
 }
 
-export function getErrorsFromParseResult<T>(
-  parseResult: SafeParseReturnType<T, T>,
+export function getErrorsFromParseResult(
+  parseResult: SafeParseReturnType<unknown, unknown>,
 ): Record<string, string> {
   if (parseResult.success) {
     return {};
