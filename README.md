@@ -83,8 +83,6 @@ The project has [GitHub Actions](.github/workflows/) set up to run linter, forma
 
 The easiest way would be to deploy to [Vercel](https://vercel.com/docs/frameworks/nextjs). No special configuration is needed except adding your OpenAI API key as a [variable](https://nextjs.org/docs/pages/building-your-application/configuring/environment-variables#environment-variables-on-vercel) there.
 
-<!-- todo repo structure -->
-
 ## Structure
 
 Inside the `src` folder:
