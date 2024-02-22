@@ -12,12 +12,9 @@ export default defineConfig({
     exclude: [...configDefaults.exclude, 'src/e2e'],
     coverage: {
       provider: 'v8',
+      include: ['src'],
       exclude: [
         ...(configDefaults.coverage.exclude ?? []),
-        'next.config.js',
-        'postcss.config.cjs',
-        'tailwind.config.ts',
-        'playwright.config.ts',
         'src/schemas',
         'src/interfaces',
         'src/components/ui',
