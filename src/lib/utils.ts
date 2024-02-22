@@ -9,9 +9,7 @@ export function cn(...inputs: ClassValue[]): string {
 export function getErrorsFromParseResult(
   parseResult: SafeParseReturnType<unknown, unknown>,
 ): Record<string, string> {
-  if (parseResult.success) {
-    return {};
-  }
+  if (parseResult.success) return {};
 
   return parseResult.error.issues.reduce<Record<string, string>>((acc, issue) => {
     return {
