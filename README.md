@@ -1,5 +1,8 @@
 # Next.js
 
+⚠️ **Warning**: This tool is a work in progress, there are a couple of [limitations](#to-do) that
+will be addressed in the nearest future.
+
 Next.js starter/boilerplate project with the following:
 
 - [Tailwind CSS](https://tailwindcss.com/).

@@ -25,6 +25,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren): ReactElement {
   return (
+    // suppressHydrationWarning warnings with ThemeProvider
+    // https://github.com/vercel/next.js/issues/49350#issuecomment-1540169181
     <html suppressHydrationWarning lang="en">
       <body
         className={cn(
