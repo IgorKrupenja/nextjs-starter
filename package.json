@@ -26,7 +26,7 @@
     "clsx": "^2.1.0",
     "eslint-plugin-vitest": "^0.3.22",
     "lucide-react": "^0.336.0",
-    "next": "14.1.0",
+    "next": "14.1.1",
     "next-themes": "^0.2.1",
     "openai": "^4.28.0",
     "react": "^18",
