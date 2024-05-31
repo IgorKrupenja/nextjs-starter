@@ -6,7 +6,7 @@ on:
         required: true
         type: string
 jobs:
-  check:
+  set-up-check:
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
