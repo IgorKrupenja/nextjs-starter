@@ -18,5 +18,6 @@ jobs:
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
       - run: pnpm install
+      - run: cp .env.example .env.local
       - run: ${{ inputs.command }}
     timeout-minutes: 10

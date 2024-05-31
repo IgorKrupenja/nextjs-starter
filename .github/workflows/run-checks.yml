@@ -5,6 +5,10 @@ on:
   pull_request:
     types: [opened, ready_for_review, reopened, synchronize]
 jobs:
+  check-lockfile:
+    uses: ./.github/workflows/run-check.yml
+    with:
+      command: pnpm run lockfile:check
   format:
     uses: ./.github/workflows/run-check.yml
     with:
