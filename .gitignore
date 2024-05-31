@@ -19,6 +19,7 @@
 # misc
 .DS_Store
 *.pem
+pnpm-lock.yaml.orig
 
 # debug
 npm-debug.log*

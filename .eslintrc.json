@@ -58,7 +58,7 @@
     {
       "files": ["**/__tests__/**/*.ts?(x)", "src/!(e2e)/**/?(*.)+(spec|test).ts?(x)"],
       "plugins": ["vitest"],
-      "extends": ["plugin:vitest/recommended", "plugin:testing-library/react"],
+      "extends": ["plugin:testing-library/react"],
       "rules": {
         "testing-library/await-async-queries": "error",
         "testing-library/no-await-sync-queries": "error",

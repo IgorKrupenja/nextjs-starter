@@ -1,0 +1,31 @@
+name: Checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, ready_for_review, reopened, synchronize]
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-lockfile:
+    uses: ./.github/workflows/run-check.yml
+    with:
+      command: pnpm run lockfile:check
+  format:
+    uses: ./.github/workflows/run-check.yml
+    with:
+      command: pnpm run format:check
+  lint:
+    uses: ./.github/workflows/run-check.yml
+    with:
+      command: pnpm run lint:check
+  test:
+    uses: ./.github/workflows/run-check.yml
+    with:
+      command: pnpm test
+  build:
+    uses: ./.github/workflows/run-check.yml
+    with:
+      command: pnpm run build

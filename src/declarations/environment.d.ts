@@ -1,5 +1,5 @@
 declare namespace NodeJS {
   interface ProcessEnv {
-    OPENAI_API_KEY: string;
+    readonly OPENAI_API_KEY?: string;
   }
 }
