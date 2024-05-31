@@ -10,22 +10,22 @@ concurrency:
 
 jobs:
   check-lockfile:
-    uses: ./.github/workflows/run-check.yml
+    uses: ./.github/workflows/check-setup.yml
     with:
       command: pnpm run lockfile:check
   format:
-    uses: ./.github/workflows/run-check.yml
+    uses: ./.github/workflows/check-setup.yml
     with:
       command: pnpm run format:check
   lint:
-    uses: ./.github/workflows/run-check.yml
+    uses: ./.github/workflows/check-setup.yml
     with:
       command: pnpm run lint:check
   test:
-    uses: ./.github/workflows/run-check.yml
+    uses: ./.github/workflows/check-setup.yml
     with:
       command: pnpm test
   build:
-    uses: ./.github/workflows/run-check.yml
+    uses: ./.github/workflows/check-setup.yml
     with:
       command: pnpm run build
