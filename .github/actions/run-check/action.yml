@@ -3,7 +3,6 @@ description: Run a CI check
 inputs:
   command:
     description: The command to run
-    # required: false
 runs:
   using: composite
   steps:
