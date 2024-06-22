@@ -5,26 +5,19 @@ on:
   pull_request:
     types: [opened, ready_for_review, reopened, synchronize]
 concurrency:
-  group: ${{ github.ref }}
+  group: ${{ github.ref }}-e2e
   cancel-in-progress: true
 
 jobs:
   test:
-    timeout-minutes: 60
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v3
-        with:
-          node-version-file: package.json
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
-      - run: pnpm install
-      - run: cp .env.example .env.local
+      - uses: ./.github/actions/run-check
 
-      # Uses container with browser dependencies pre-installed as this is fater
+      # Uses container with browser dependencies pre-installed as this is faster
       # Slower version with cache has been removed here:
       # https://github.com/IgorKrupenja/nextjs-starter/commit/4b6a52fa33341cbd87f63d0c79366ce679a1b2b8
       - name: Run E2E tests
@@ -34,7 +27,7 @@ jobs:
           # env HOME=/root is needed for Firefox
           args: bash -c "npm install -g pnpm && env HOME=/root pnpm run test:e2e"
 
-      - name: Store Artifacts from Failed Tests
+      - name: Store artifacts from failed tests
         if: failure()
         uses: actions/upload-artifact@v2
         with:

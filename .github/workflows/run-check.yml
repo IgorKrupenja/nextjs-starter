@@ -9,15 +9,9 @@ jobs:
   run-check:
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v3
+      - uses: ./.github/actions/run-check
         with:
-          node-version-file: package.json
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
-      - run: pnpm install
-      - run: cp .env.example .env.local
-      - run: ${{ inputs.command }}
-    timeout-minutes: 10
+          command: ${{ inputs.command }}
