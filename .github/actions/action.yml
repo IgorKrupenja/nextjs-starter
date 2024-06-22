@@ -1,0 +1,27 @@
+name: Run check
+description: Run a CI check
+# on:
+#   workflow_call:
+#     inputs:
+#       command:
+#         required: true
+#         type: string
+runs:
+  # if: github.event.pull_request.draft == false
+  # runs-on: ubuntu-latest
+  using: composite
+  steps:
+    - uses: actions/checkout@v4
+    - uses: pnpm/action-setup@v2
+    - uses: actions/setup-node@v3
+      with:
+        node-version-file: package.json
+        cache: pnpm
+        cache-dependency-path: pnpm-lock.yaml
+    - run: pnpm install
+      shell: bash
+    - run: cp .env.example .env.local
+      shell: bash
+    - run: ${{ inputs.command }}
+      shell: bash
+  # timeout-minutes: 10
