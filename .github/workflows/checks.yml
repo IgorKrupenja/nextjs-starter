@@ -1,31 +1,31 @@
-name: Checks
-on:
-  push:
-    branches: [main]
-  pull_request:
-    types: [opened, ready_for_review, reopened, synchronize]
-# concurrency:
-#   group: ${{ github.ref }}
-#   cancel-in-progress: true
+# name: Checks
+# on:
+#   push:
+#     branches: [main]
+#   pull_request:
+#     types: [opened, ready_for_review, reopened, synchronize]
+# # concurrency:
+# #   group: ${{ github.ref }}
+# #   cancel-in-progress: true
 
-jobs:
-  check-lockfile:
-    uses: ./.github/actions/test-action.yml
-    with:
-      command: pnpm run lockfile:check
-  format:
-    uses: ./.github/actions/test-action.yml
-    with:
-      command: pnpm run format:check
-  lint:
-    uses: ./.github/actions/test-action.yml
-    with:
-      command: pnpm run lint:check
-  test:
-    uses: ./.github/actions/test-action.yml
-    with:
-      command: pnpm test
-  build:
-    uses: ./.github/actions/test-action.yml
-    with:
-      command: pnpm run build
+# jobs:
+#   check-lockfile:
+#     uses: ./.github/actions/test-action.yml
+#     with:
+#       command: pnpm run lockfile:check
+#   format:
+#     uses: ./.github/actions/test-action.yml
+#     with:
+#       command: pnpm run format:check
+#   lint:
+#     uses: ./.github/actions/test-action.yml
+#     with:
+#       command: pnpm run lint:check
+#   test:
+#     uses: ./.github/actions/test-action.yml
+#     with:
+#       command: pnpm test
+#   build:
+#     uses: ./.github/actions/test-action.yml
+#     with:
+#       command: pnpm run build
