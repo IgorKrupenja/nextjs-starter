@@ -3,7 +3,7 @@ description: Run a CI check
 inputs:
   command:
     description: The command to run
-    required: false
+    # required: false
 runs:
   using: composite
   steps:
@@ -20,4 +20,3 @@ runs:
       shell: bash
     - run: ${{ inputs.command }}
       shell: bash
-  # timeout-minutes: 10

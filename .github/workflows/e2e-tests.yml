@@ -17,9 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/run-check
-      # todo remove
-      # with:
-      #   command: echo "blah"
 
       # Uses container with browser dependencies pre-installed as this is faster
       # Slower version with cache has been removed here:
@@ -31,7 +28,7 @@ jobs:
           # env HOME=/root is needed for Firefox
           args: bash -c "npm install -g pnpm && env HOME=/root pnpm run test:e2e"
 
-      - name: Store Artifacts from Failed Tests
+      - name: Store artifacts from failed tests
         if: failure()
         uses: actions/upload-artifact@v2
         with:
