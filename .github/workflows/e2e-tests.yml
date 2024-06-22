@@ -14,15 +14,7 @@ jobs:
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v3
-        with:
-          node-version-file: package.json
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
-      - run: pnpm install
-      - run: cp .env.example .env.local
+      - uses: ./.github/workflows/run-check.yml
 
       # Uses container with browser dependencies pre-installed as this is fater
       # Slower version with cache has been removed here:
