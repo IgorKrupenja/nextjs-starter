@@ -4,9 +4,8 @@ on:
     branches: [main]
   pull_request:
     types: [opened, ready_for_review, reopened, synchronize]
-    # todo fix concurrency
 concurrency:
-  group: ${{ github.ref }}
+  group: ${{ github.ref }}-e2e
   cancel-in-progress: true
 
 jobs:
