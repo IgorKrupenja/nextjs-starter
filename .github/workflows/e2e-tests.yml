@@ -18,7 +18,7 @@ jobs:
         with:
           command: echo "blah"
 
-      # Uses container with browser dependencies pre-installed as this is fater
+      # Uses container with browser dependencies pre-installed as this is faster
       # Slower version with cache has been removed here:
       # https://github.com/IgorKrupenja/nextjs-starter/commit/4b6a52fa33341cbd87f63d0c79366ce679a1b2b8
       - name: Run E2E tests
