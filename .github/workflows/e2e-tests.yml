@@ -1,4 +1,4 @@
-name: Playwright tests
+name: E2E tests
 on:
   push:
     branches: [main]
@@ -29,7 +29,7 @@ jobs:
       # Uses container with browser dependencies pre-installed as this is fater
       # Slower version with cache has been removed here:
       # https://github.com/IgorKrupenja/nextjs-starter/commit/4b6a52fa33341cbd87f63d0c79366ce679a1b2b8
-      - name: Run Playwright tests
+      - name: Run E2E tests
         uses: docker://mcr.microsoft.com/playwright:v1.44.1-jammy
         with:
           # The container does not have pnpm
