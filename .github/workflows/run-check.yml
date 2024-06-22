@@ -1,4 +1,4 @@
-name: Check setup
+name: Run check
 on:
   workflow_call:
     inputs:
@@ -6,7 +6,7 @@ on:
         required: true
         type: string
 jobs:
-  set-up-check:
+  run-check:
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
