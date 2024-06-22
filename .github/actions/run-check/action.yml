@@ -1,15 +1,10 @@
 name: Run check
 description: Run a CI check
-# on:
-#   workflow_call:
 inputs:
   command:
     description: The command to run
     required: true
-    # type: string
 runs:
-  # if: github.event.pull_request.draft == false
-  # runs-on: ubuntu-latest
   using: composite
   steps:
     - uses: actions/checkout@v4
