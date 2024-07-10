@@ -1,5 +1,5 @@
 name: Run pnpm install
-description: Run a pnpm install with optional command
+description: Run pnpm install with optional extra command
 inputs:
   command:
     description: The command to run
