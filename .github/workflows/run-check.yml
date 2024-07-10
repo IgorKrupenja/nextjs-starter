@@ -12,6 +12,6 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/run-check
+      - uses: ./.github/actions/pnpm-install
         with:
           command: ${{ inputs.command }}

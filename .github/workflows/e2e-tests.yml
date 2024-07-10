@@ -15,7 +15,7 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/run-check
+      - uses: ./.github/actions/pnpm-install
 
       # Uses container with browser dependencies pre-installed as this is faster
       # Slower version with cache has been removed here:
