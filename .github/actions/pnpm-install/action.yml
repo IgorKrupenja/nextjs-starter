@@ -1,5 +1,5 @@
-name: Run check
-description: Run a CI check
+name: Run pnpm install
+description: Run a pnpm install with optional command
 inputs:
   command:
     description: The command to run
