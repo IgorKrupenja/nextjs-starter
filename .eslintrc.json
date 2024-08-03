@@ -7,7 +7,7 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
-  "plugins": ["sort-export-all", "unused-imports", "unicorn"],
+  "plugins": ["unused-imports", "unicorn"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
@@ -39,7 +39,6 @@
     "no-return-await": "warn",
     "no-unused-vars": "off",
     "require-await": "off",
-    "sort-export-all/sort-export-all": ["warn", "asc"],
     "sort-imports": [
       "warn",
       {
