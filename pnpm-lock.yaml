@@ -117,9 +117,6 @@ importers:
       eslint-plugin-playwright:
         specifier: ^1.6.2
         version: 1.6.2(eslint@8.57.0)
-      eslint-plugin-sort-export-all:
-        specifier: ^1.4.1
-        version: 1.4.1(eslint@8.57.0)
       eslint-plugin-testing-library:
         specifier: ^6.2.2
         version: 6.2.2(eslint@8.57.0)(typescript@5.5.4)
@@ -523,6 +520,7 @@ packages:
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
+    deprecated: Use @eslint/config-array instead
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -530,6 +528,7 @@ packages:
 
   '@humanwhocodes/object-schema@2.0.3':
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
+    deprecated: Use @eslint/object-schema instead
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -1901,11 +1900,6 @@ packages:
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
-
-  eslint-plugin-sort-export-all@1.4.1:
-    resolution: {integrity: sha512-6MxnZYKqaqp6HH02bctYqEz/ccDZPGouZQWiIAWF/9x9EeiQpdPxuEnpFHyWHijRSqleK1mO1xOaF42DeueQoQ==}
-    peerDependencies:
-      eslint: ^4 || ^5 || ^6 || ^7 || ^8
 
   eslint-plugin-testing-library@6.2.2:
     resolution: {integrity: sha512-1E94YOTUDnOjSLyvOwmbVDzQi/WkKm3WVrMXu6SmBr6DN95xTGZmI6HJ/eOkSXh/DlheRsxaPsJvZByDBhWLVQ==}
@@ -5626,11 +5620,6 @@ snapshots:
       resolve: 2.0.0-next.5
       semver: 6.3.1
       string.prototype.matchall: 4.0.11
-
-  eslint-plugin-sort-export-all@1.4.1(eslint@8.57.0):
-    dependencies:
-      eslint: 8.57.0
-      natural-compare: 1.4.0
 
   eslint-plugin-testing-library@6.2.2(eslint@8.57.0)(typescript@5.5.4):
     dependencies:
