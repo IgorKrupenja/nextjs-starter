@@ -2,8 +2,8 @@
   "extends": [
     "eslint:recommended",
     "next/core-web-vitals",
-    "plugin:import/recommended",
-    "plugin:import/typescript",
+    "plugin:import-x/recommended",
+    "plugin:import-x/typescript",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
@@ -13,7 +13,7 @@
   },
   "ignorePatterns": ["next.config.js", "postcss.config.cjs", "src/components/ui"],
   "settings": {
-    "import/resolver": {
+    "import-x/resolver": {
       "typescript": true,
       "node": true
     }
@@ -26,8 +26,8 @@
       }
     ],
     "@typescript-eslint/require-await": "error",
-    "import/no-named-as-default": "off",
-    "import/order": [
+    "import-x/no-named-as-default": "off",
+    "import-x/order": [
       "warn",
       {
         "newlines-between": "always",
