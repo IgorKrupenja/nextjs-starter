@@ -24,8 +24,8 @@ importers:
         specifier: ^1.2.1
         version: 1.2.1(@types/react-dom@18.3.0)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       ai:
-        specifier: ^3.3.30
-        version: 3.3.30(openai@4.58.2(zod@3.23.8))(react@18.3.1)(solid-js@1.8.15)(sswr@2.1.0(svelte@4.2.11))(svelte@4.2.11)(vue@3.4.19(typescript@5.6.2))(zod@3.23.8)
+        specifier: ^3.3.35
+        version: 3.3.35(openai@4.58.2(zod@3.23.8))(react@18.3.1)(solid-js@1.8.15)(sswr@2.1.0(svelte@4.2.11))(svelte@4.2.11)(vue@3.4.19(typescript@5.6.2))(zod@3.23.8)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -175,8 +175,8 @@ packages:
     resolution: {integrity: sha512-oAc49O5+xypVrKM7EUU5P/Y4DUL4JZUWVxhejoAVOTOl3WZUEWsMbP3QZR+TrimQIsS0WR/n9UuF6U0jPdp0tQ==}
     engines: {node: '>=18'}
 
-  '@ai-sdk/react@0.0.55':
-    resolution: {integrity: sha512-9fUUEEEoH01M6ZhvyZ/2v0DI6tiYnSldBg6RaKoy+qx2tSeKvOpFNZhT/iOvQ7oqAyyp0Ocg5Rj7L/jcLXSMxw==}
+  '@ai-sdk/react@0.0.57':
+    resolution: {integrity: sha512-HbamX1KNEXgdKSKRetosEZemCCAp8HfhTztWuYS4v83r214NLJ4tMyWAseqDVp5KucHHxp3XH0QHIYlpwzdP7A==}
     engines: {node: '>=18'}
     peerDependencies:
       react: ^18 || ^19
@@ -187,8 +187,8 @@ packages:
       zod:
         optional: true
 
-  '@ai-sdk/solid@0.0.44':
-    resolution: {integrity: sha512-3kMhxalepc78jWr2Qg1BAHbY04JKYxp8wRu3TACrRUdokxzwD5sbZYtTb7vu9tw2wx78rfu0DH44CESFWpSfZg==}
+  '@ai-sdk/solid@0.0.45':
+    resolution: {integrity: sha512-2CSpXuQqIxO37xcBvYDmo9+o1eggx6ANT2XYSYXiX9O+igahuCQYxuf4/HQAxy4boKiCcdbE4wBDTVybqKjTCg==}
     engines: {node: '>=18'}
     peerDependencies:
       solid-js: ^1.7.7
@@ -196,8 +196,8 @@ packages:
       solid-js:
         optional: true
 
-  '@ai-sdk/svelte@0.0.46':
-    resolution: {integrity: sha512-cokqS91vQkpqiRgf8xKwOONFb/RwkIbRg9jYVRb+z5NR9OsWXKMEfoCAf8+VgURfVbp8nqA+ddRXvtgYCwqQjQ==}
+  '@ai-sdk/svelte@0.0.47':
+    resolution: {integrity: sha512-QLiP5KkzkIUKgGhQFjfCm20+T/StAlxktdL/TH/T+we4YX9cgNZID3zD4X6bYxJOUnl0xhR9vBFN0p5ZJkHRtQ==}
     engines: {node: '>=18'}
     peerDependencies:
       svelte: ^3.0.0 || ^4.0.0
@@ -205,8 +205,8 @@ packages:
       svelte:
         optional: true
 
-  '@ai-sdk/ui-utils@0.0.41':
-    resolution: {integrity: sha512-I0trJKWxVG8hXeG0MvKqLG54fZjdeGjXvcVZocaSnWMBhl9lpTQxrqAR6ZsQMFDXs5DbvXoKtQs488qu2Bzaiw==}
+  '@ai-sdk/ui-utils@0.0.42':
+    resolution: {integrity: sha512-NO84tR/hJWsK9siLYkPS9YCOm2aMfkijElNc8y8NT6WG2FwLddp05CxvCEHWKsKmOD+GWXEy/LczMtDh3xYEew==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.0.0
@@ -214,8 +214,8 @@ packages:
       zod:
         optional: true
 
-  '@ai-sdk/vue@0.0.46':
-    resolution: {integrity: sha512-H366ydskPbZP8uRs4sm3SAi97P3JVTRI5Q8xYTI6uTaY4UFBA6aOWdDxniYZNa67ebemfe11m7ksX4wHW6Wl8g==}
+  '@ai-sdk/vue@0.0.47':
+    resolution: {integrity: sha512-A53JP7foDm8rAbitBonNo+LN+bPY/LqHtu2UOEOWcjBinUUbqXnpd3m6ZjQ0aXwaiNBPLX1vjOveduo88wCReA==}
     engines: {node: '>=18'}
     peerDependencies:
       vue: ^3.3.4
@@ -1393,8 +1393,8 @@ packages:
     resolution: {integrity: sha512-5GG/5IbQQpC9FpkRGsSvZI5QYeSCzlJHdpBQntCsuTOxhKD8lqKhrleg2Yi7yvMIf82Ycmmqln9U8V9qwEiJew==}
     engines: {node: '>= 8.0.0'}
 
-  ai@3.3.30:
-    resolution: {integrity: sha512-CHkxudR5tXrRFjcNEeBmVmWZw1+B9CBxELrC1FoYrPXKlQJKYRopS1lNGQahl671mc3jawY6xnNQt84p5wFWGg==}
+  ai@3.3.35:
+    resolution: {integrity: sha512-gu+Pm2knB+nqvXURAKoU+wDcob3L2F5qUvUuMVV07B+QM1zFWDSCHcoKGbkDcgYCpXgnEWR8irBRkJs0DbYhKA==}
     engines: {node: '>=18'}
     peerDependencies:
       openai: ^4.42.0
@@ -3787,35 +3787,35 @@ snapshots:
     dependencies:
       json-schema: 0.4.0
 
-  '@ai-sdk/react@0.0.55(react@18.3.1)(zod@3.23.8)':
+  '@ai-sdk/react@0.0.57(react@18.3.1)(zod@3.23.8)':
     dependencies:
       '@ai-sdk/provider-utils': 1.0.18(zod@3.23.8)
-      '@ai-sdk/ui-utils': 0.0.41(zod@3.23.8)
+      '@ai-sdk/ui-utils': 0.0.42(zod@3.23.8)
       swr: 2.2.5(react@18.3.1)
     optionalDependencies:
       react: 18.3.1
       zod: 3.23.8
 
-  '@ai-sdk/solid@0.0.44(solid-js@1.8.15)(zod@3.23.8)':
+  '@ai-sdk/solid@0.0.45(solid-js@1.8.15)(zod@3.23.8)':
     dependencies:
       '@ai-sdk/provider-utils': 1.0.18(zod@3.23.8)
-      '@ai-sdk/ui-utils': 0.0.41(zod@3.23.8)
+      '@ai-sdk/ui-utils': 0.0.42(zod@3.23.8)
     optionalDependencies:
       solid-js: 1.8.15
     transitivePeerDependencies:
       - zod
 
-  '@ai-sdk/svelte@0.0.46(svelte@4.2.11)(zod@3.23.8)':
+  '@ai-sdk/svelte@0.0.47(svelte@4.2.11)(zod@3.23.8)':
     dependencies:
       '@ai-sdk/provider-utils': 1.0.18(zod@3.23.8)
-      '@ai-sdk/ui-utils': 0.0.41(zod@3.23.8)
+      '@ai-sdk/ui-utils': 0.0.42(zod@3.23.8)
       sswr: 2.1.0(svelte@4.2.11)
     optionalDependencies:
       svelte: 4.2.11
     transitivePeerDependencies:
       - zod
 
-  '@ai-sdk/ui-utils@0.0.41(zod@3.23.8)':
+  '@ai-sdk/ui-utils@0.0.42(zod@3.23.8)':
     dependencies:
       '@ai-sdk/provider': 0.0.23
       '@ai-sdk/provider-utils': 1.0.18(zod@3.23.8)
@@ -3825,10 +3825,10 @@ snapshots:
     optionalDependencies:
       zod: 3.23.8
 
-  '@ai-sdk/vue@0.0.46(vue@3.4.19(typescript@5.6.2))(zod@3.23.8)':
+  '@ai-sdk/vue@0.0.47(vue@3.4.19(typescript@5.6.2))(zod@3.23.8)':
     dependencies:
       '@ai-sdk/provider-utils': 1.0.18(zod@3.23.8)
-      '@ai-sdk/ui-utils': 0.0.41(zod@3.23.8)
+      '@ai-sdk/ui-utils': 0.0.42(zod@3.23.8)
       swrv: 1.0.4(vue@3.4.19(typescript@5.6.2))
     optionalDependencies:
       vue: 3.4.19(typescript@5.6.2)
@@ -5036,15 +5036,15 @@ snapshots:
     dependencies:
       humanize-ms: 1.2.1
 
-  ai@3.3.30(openai@4.58.2(zod@3.23.8))(react@18.3.1)(solid-js@1.8.15)(sswr@2.1.0(svelte@4.2.11))(svelte@4.2.11)(vue@3.4.19(typescript@5.6.2))(zod@3.23.8):
+  ai@3.3.35(openai@4.58.2(zod@3.23.8))(react@18.3.1)(solid-js@1.8.15)(sswr@2.1.0(svelte@4.2.11))(svelte@4.2.11)(vue@3.4.19(typescript@5.6.2))(zod@3.23.8):
     dependencies:
       '@ai-sdk/provider': 0.0.23
       '@ai-sdk/provider-utils': 1.0.18(zod@3.23.8)
-      '@ai-sdk/react': 0.0.55(react@18.3.1)(zod@3.23.8)
-      '@ai-sdk/solid': 0.0.44(solid-js@1.8.15)(zod@3.23.8)
-      '@ai-sdk/svelte': 0.0.46(svelte@4.2.11)(zod@3.23.8)
-      '@ai-sdk/ui-utils': 0.0.41(zod@3.23.8)
-      '@ai-sdk/vue': 0.0.46(vue@3.4.19(typescript@5.6.2))(zod@3.23.8)
+      '@ai-sdk/react': 0.0.57(react@18.3.1)(zod@3.23.8)
+      '@ai-sdk/solid': 0.0.45(solid-js@1.8.15)(zod@3.23.8)
+      '@ai-sdk/svelte': 0.0.47(svelte@4.2.11)(zod@3.23.8)
+      '@ai-sdk/ui-utils': 0.0.42(zod@3.23.8)
+      '@ai-sdk/vue': 0.0.47(vue@3.4.19(typescript@5.6.2))(zod@3.23.8)
       '@opentelemetry/api': 1.9.0
       eventsource-parser: 1.1.2
       json-schema: 0.4.0
