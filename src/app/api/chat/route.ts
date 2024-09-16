@@ -1,5 +1,5 @@
 import { openai } from '@ai-sdk/openai';
-import { convertToCoreMessages, streamText } from 'ai';
+import { Message, convertToCoreMessages, streamText } from 'ai';
 
 export const runtime = 'edge';
 
@@ -10,7 +10,9 @@ export async function POST(request: Request): Promise<Response> {
   if (!process.env.OPENAI_API_KEY)
     return new Response('OpenAI API key is not set', { status: 500 });
 
-  const { messages } = await request.json();
+  const { messages } = (await request.json()) as {
+    messages: Message[];
+  };
 
   const result = await streamText({
     model: openai('gpt-4o'),
