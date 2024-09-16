@@ -11,10 +11,8 @@ export function getErrorsFromParseResult(
 ): Record<string, string> {
   if (parseResult.success) return {};
 
-  return parseResult.error.issues.reduce<Record<string, string>>((acc, issue) => {
-    return {
-      ...acc,
-      [issue.path.join('.')]: issue.message,
-    };
+  return parseResult.error.issues.reduce<Record<string, string>>((acc, { path, message }) => {
+    acc[path.join('.')] = message;
+    return acc;
   }, {});
 }
