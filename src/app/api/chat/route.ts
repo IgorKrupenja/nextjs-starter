@@ -1,23 +1,22 @@
-import { OpenAIStream, StreamingTextResponse } from 'ai';
-import OpenAI from 'openai';
+import { openai } from '@ai-sdk/openai';
+import { convertToCoreMessages, streamText } from 'ai';
 
 export const runtime = 'edge';
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+// Allow streaming responses up to 30 seconds
+export const maxDuration = 30;
 
 export async function POST(request: Request): Promise<Response> {
-  if (!openai.apiKey) return new Response('OpenAI API key is not set', { status: 500 });
+  if (!process.env.OPENAI_API_KEY)
+    return new Response('OpenAI API key is not set', { status: 500 });
 
-  const { messages } = (await request.json()) as {
-    messages: OpenAI.ChatCompletionMessageParam[];
-  };
+  const { messages } = await request.json();
 
-  const response = await openai.chat.completions.create({
-    model: 'gpt-4o',
-    stream: true,
-    messages,
+  const result = await streamText({
+    model: openai('gpt-4o'),
+    system: 'You are a helpful assistant.',
+    messages: convertToCoreMessages(messages),
   });
-  const stream = OpenAIStream(response);
 
-  return new StreamingTextResponse(stream);
+  return result.toDataStreamResponse();
 }
