@@ -80,8 +80,7 @@ describe('FeedbackForm', () => {
     await userEvent.click(submitButton);
 
     await waitFor(() => {
-      // todo fix this
-      expect(submitButton as HTMLButtonElement).toBeDefined();
+      expect(submitButton.attributes.getNamedItem('disabled')).toBeDefined();
     });
   });
 });
