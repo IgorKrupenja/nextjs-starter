@@ -11,8 +11,15 @@ export function getErrorsFromParseResult(
 ): Record<string, string> {
   if (parseResult.success) return {};
 
-  return parseResult.error.issues.reduce<Record<string, string>>((acc, { path, message }) => {
-    acc[path.join('.')] = message;
-    return acc;
-  }, {});
+  const errors: Record<string, string[]> = {};
+
+  parseResult.error.issues.forEach(({ path, message }) => {
+    const key = path.join('.');
+    if (!errors[key]) errors[key] = [];
+    errors[key].push(message);
+  });
+
+  return Object.fromEntries(
+    Object.entries(errors).map(([key, messages]) => [key, messages.join(', ')]),
+  );
 }
