@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "next dev -H 0.0.0.0 --turbo --experimental-https",
     "build": "next build",
-    "lockfile:check": "cp pnpm-lock.yaml pnpm-lock.yaml.orig && pnpm install && cmp -s pnpm-lock.yaml pnpm-lock.yaml.orig",
     "lint": "next lint --fix --max-warnings 0",
     "lint:check": "next lint --max-warnings 0",
     "format": "prettier --write .",
