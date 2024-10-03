@@ -4,10 +4,6 @@ import FeedbackPage from './page';
 
 import { expectToContainClasses } from '@/test/utils';
 
-// vi.mock('@/components/common/back-button', () => ({
-//   default: vi.fn(() => <button>Back</button>),
-// }));
-
 describe('FeedbackPage', () => {
   it('renders the back button with correct class', () => {
     render(<FeedbackPage />);
