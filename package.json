@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "next dev -H 0.0.0.0 --turbo --experimental-https",
     "build": "next build",
-    "start": "next start",
     "lockfile:check": "cp pnpm-lock.yaml pnpm-lock.yaml.orig && pnpm install && cmp -s pnpm-lock.yaml pnpm-lock.yaml.orig",
     "lint": "next lint --fix --max-warnings 0",
     "lint:check": "next lint --max-warnings 0",
@@ -17,13 +16,13 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^0.0.63",
+    "@ai-sdk/openai": "^0.0.64",
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-dropdown-menu": "^2.1.2",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.2",
-    "ai": "^3.4.7",
+    "ai": "^3.4.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.447.0",
