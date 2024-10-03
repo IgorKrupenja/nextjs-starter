@@ -13,12 +13,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       include: ['src'],
-      exclude: [
-        ...(configDefaults.coverage.exclude ?? []),
-        'src/schemas',
-        'src/interfaces',
-        'src/components/ui',
-      ],
+      exclude: [...(configDefaults.coverage.exclude ?? []), 'src/interfaces', 'src/components/ui'],
     },
   },
   resolve: {
