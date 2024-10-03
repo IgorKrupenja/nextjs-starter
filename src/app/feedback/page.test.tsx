@@ -9,8 +9,7 @@ describe('FeedbackPage', () => {
     render(<FeedbackPage />);
     const backButton = screen.getByRole('link', { name: 'Back' });
     expect(backButton).toBeDefined();
-    console.log(backButton.classList);
-    expectToContainClasses(backButton, ['absolute', 'left-0', 'top-0']);
+    expectToContainClasses(backButton, ['absolute', 'left-0', 'top-0', 'sm:top-3']);
   });
 
   it('renders the heading with correct text and classes', () => {
