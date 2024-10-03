@@ -83,4 +83,73 @@ describe('FeedbackForm', () => {
       expect(submitButton.attributes.getNamedItem('disabled')).toBeDefined();
     });
   });
+
+  it('displays a success toast when the form is submitted successfully', async () => {
+    vi.spyOn(global, 'fetch').mockResolvedValueOnce({
+      ok: true,
+    } as unknown as Response);
+
+    render(<FeedbackForm />);
+
+    await userEvent.type(screen.getByLabelText('Name'), 'John Doe');
+    await userEvent.type(screen.getByLabelText('E-mail'), 'john@example.com');
+    await userEvent.type(screen.getByLabelText('Message'), 'This is a test message');
+
+    const submitButton = screen.getByRole('button', { name: 'Submit' });
+    await userEvent.click(submitButton);
+
+    await waitFor(() => {
+      expect(mockToast).toHaveBeenCalledWith({
+        title: 'Feedback sent!',
+        description: 'To do: implement in route handler',
+      });
+    });
+  });
+
+  it('displays an error toast when the form submission fails', async () => {
+    vi.spyOn(global, 'fetch').mockResolvedValueOnce({
+      ok: false,
+    } as unknown as Response);
+
+    render(<FeedbackForm />);
+
+    await userEvent.type(screen.getByLabelText('Name'), 'John Doe');
+    await userEvent.type(screen.getByLabelText('E-mail'), 'john@example.com');
+    await userEvent.type(screen.getByLabelText('Message'), 'This is a test message');
+
+    const submitButton = screen.getByRole('button', { name: 'Submit' });
+    await userEvent.click(submitButton);
+
+    await waitFor(() => {
+      expect(mockToast).toHaveBeenCalledWith({
+        title: 'Uh oh! Something went wrong.',
+        description: 'There was a problem with your request.',
+      });
+    });
+  });
+
+  it('resets the form after a successful submission', async () => {
+    vi.spyOn(global, 'fetch').mockResolvedValueOnce({
+      ok: true,
+    } as unknown as Response);
+
+    render(<FeedbackForm />);
+
+    await userEvent.type(screen.getByLabelText('Name'), 'John Doe');
+    await userEvent.type(screen.getByLabelText('E-mail'), 'john@example.com');
+    await userEvent.type(screen.getByLabelText('Message'), 'This is a test message');
+
+    const submitButton = screen.getByRole('button', { name: 'Submit' });
+    await userEvent.click(submitButton);
+
+    await waitFor(() => {
+      expect(screen.getByRole<HTMLInputElement>('textbox', { name: 'Name' }).value).toBe('');
+    });
+    await waitFor(() => {
+      expect(screen.getByRole<HTMLInputElement>('textbox', { name: 'E-mail' }).value).toBe('');
+    });
+    await waitFor(() => {
+      expect(screen.getByRole<HTMLInputElement>('textbox', { name: 'Message' }).value).toBe('');
+    });
+  });
 });
