@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@ai-sdk/openai':
-        specifier: ^0.0.63
-        version: 0.0.63(zod@3.23.8)
+        specifier: ^0.0.64
+        version: 0.0.64(zod@3.23.8)
       '@hookform/resolvers':
         specifier: ^3.9.0
         version: 3.9.0(react-hook-form@7.53.0(react@18.3.1))
@@ -165,8 +165,8 @@ packages:
   '@adobe/css-tools@4.4.0':
     resolution: {integrity: sha512-Ff9+ksdQQB3rMncgqDK78uLznstjyfIf2Arnh22pW8kBpLs6rpKDwgnZT46hin5Hl1WzazzK64DOrhSwYpS7bQ==}
 
-  '@ai-sdk/openai@0.0.63':
-    resolution: {integrity: sha512-VX4yDfP1zoKIoKqkFuBJGPjQ7aYFxE2GgPW8hMAolCBolQyx3+0+mgID+JmU5Jaq3PAPWtxWuuiwasPqh+e8zQ==}
+  '@ai-sdk/openai@0.0.64':
+    resolution: {integrity: sha512-0FhO4hpxCTGKuyR1QsPMsxS3I385/aUPylopzVUaVT6pDnMwIh4HZrVqkK+R1D+xCR9F+I9ZZ0uSaEDo0Oe7jw==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.0.0
@@ -3881,7 +3881,7 @@ snapshots:
 
   '@adobe/css-tools@4.4.0': {}
 
-  '@ai-sdk/openai@0.0.63(zod@3.23.8)':
+  '@ai-sdk/openai@0.0.64(zod@3.23.8)':
     dependencies:
       '@ai-sdk/provider': 0.0.24
       '@ai-sdk/provider-utils': 1.0.20(zod@3.23.8)
@@ -4728,7 +4728,7 @@ snapshots:
 
   '@testing-library/dom@10.1.0':
     dependencies:
-      '@babel/code-frame': 7.24.6
+      '@babel/code-frame': 7.25.7
       '@babel/runtime': 7.24.6
       '@types/aria-query': 5.0.4
       aria-query: 5.3.0
@@ -5109,7 +5109,7 @@ snapshots:
 
   '@vue/compiler-core@3.4.19':
     dependencies:
-      '@babel/parser': 7.24.6
+      '@babel/parser': 7.25.7
       '@vue/shared': 3.4.19
       entities: 4.5.0
       estree-walker: 2.0.2
@@ -5122,7 +5122,7 @@ snapshots:
 
   '@vue/compiler-sfc@3.4.19':
     dependencies:
-      '@babel/parser': 7.24.6
+      '@babel/parser': 7.25.7
       '@vue/compiler-core': 3.4.19
       '@vue/compiler-dom': 3.4.19
       '@vue/compiler-ssr': 3.4.19
