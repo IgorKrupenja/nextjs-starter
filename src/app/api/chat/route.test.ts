@@ -1,5 +1,4 @@
 import { CoreTool, StreamTextResult, convertToCoreMessages, streamText } from 'ai';
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { POST } from './route';
 
@@ -19,7 +18,7 @@ describe('POST', () => {
   });
 
   it('should return a 500 response if OPENAI_API_KEY is not set', async () => {
-    delete process.env.OPENAI_API_KEY;
+    vi.stubEnv('OPENAI_API_KEY', undefined);
     const request = new Request('http://localhost', {
       method: 'POST',
       body: JSON.stringify({ messages: [] }),
@@ -32,7 +31,7 @@ describe('POST', () => {
   });
 
   it('should process messages and return a stream response', async () => {
-    process.env.OPENAI_API_KEY = 'test-key';
+    vi.stubEnv('OPENAI_API_KEY', 'test-key');
     const mockMessages = [{ role: 'user', content: 'Hello' }];
     const mockRequest = new Request('http://localhost', {
       method: 'POST',
