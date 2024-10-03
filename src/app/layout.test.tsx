@@ -11,6 +11,10 @@ vi.mock('next/font/google', () => ({
   }),
 }));
 
+vi.mock('@/components/ui/toaster', () => ({
+  Toaster: vi.fn(() => <div data-testid="mock-toaster" />),
+}));
+
 describe('RootLayout', () => {
   beforeEach(() => Promise.resolve());
 
@@ -45,5 +49,12 @@ describe('RootLayout', () => {
       'items-center',
       'justify-center',
     ]);
+  });
+
+  it('should render Toaster component', () => {
+    render(<RootLayout />);
+    const toasterElement = screen.getByTestId('mock-toaster');
+
+    expect(toasterElement).toBeDefined();
   });
 });

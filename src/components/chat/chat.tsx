@@ -22,7 +22,7 @@ export function Chat({ className }: PropsWithClassName): ReactElement {
       <form className="flex w-full items-center space-x-2" onSubmit={handleSubmit}>
         <Input
           value={input}
-          placeholder="Message your AI pet"
+          placeholder="Message the AI"
           onChange={handleInputChange}
           aria-label="Message"
         />
